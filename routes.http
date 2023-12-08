@@ -1,0 +1,6 @@
+POST http://localhost:3333/mangas
+Content-Type: application/json
+
+{
+    "titulo": "Livro 01"
+}
