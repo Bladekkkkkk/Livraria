@@ -2,5 +2,32 @@ POST http://localhost:3333/mangas
 Content-Type: application/json
 
 {
-    "titulo": "Livro 01"
+    "titulo": "Manga 01",
+    "autor": "Autor 01",
+    "npaginas": 100
 }
+
+###
+
+GET http://localhost:3333/mangas?search=Manga 02
+
+
+###
+
+GET http://localhost:3333/mangas
+
+###
+
+PUT http://localhost:3333/mangas/f6fee4f7-05e8-4a34-9d48-233f1f78a0ae
+Content-Type: application/json
+
+{
+    "titulo": "Manga 02",
+    "autor": "Autor 02",
+    "npaginas": 100
+}
+
+
+###
+
+DELETE http://localhost:3333/mangas/f6fee4f7-05e8-4a34-9d48-233f1f78a0ae

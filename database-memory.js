@@ -1,10 +1,27 @@
-import { randomUUID } from "node:crypto";
+import { randomUUID } from "crypto"
+
+
 export class DatabaseMemory{
 #mangas = new Map()
 
 //listando mangas em as  chaves
-list(){
-    return this.#mangas.values()
+list(search){
+    return Array.from(this.#mangas.entries()).map((mangaArray)  => {
+        const id = mangaArray[0]
+        const data = mangaArray[1]
+
+        return{
+            id,
+            ...data,
+        }
+    })
+
+.filter(manga => {
+    if (search) {
+        return manga.titulo.includes(search)
+    }
+    return true
+})
 }
 
 //Estou criando um manga
