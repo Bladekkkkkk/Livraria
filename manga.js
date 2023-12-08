@@ -10,8 +10,14 @@ const database = new DatabaseMemory()
 const manga = fastify()
 
 
-manga.post('/manga', () => {
-    return 'cadastrar!'
+manga.post('/mangas', (request, reply) => {
+    database.create({
+        titulo: 'Manga 01',
+        autor: 'autor 01',
+        npaginas:400,
+    })
+    console.log(database.list())
+    return reply.status(201).send()
 })
 
 manga.get('/mangas',() => {
