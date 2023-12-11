@@ -1,3 +1,4 @@
+//Criando uma Rota
 POST http://localhost:3333/mangas
 Content-Type: application/json
 
@@ -8,17 +9,17 @@ Content-Type: application/json
 }
 
 ###
-
+//Fazendo uma pesquisa com o search
 GET http://localhost:3333/mangas?search=Manga 02
 
 
 ###
-
+//Criando e listando livros
 GET http://localhost:3333/mangas
 
 ###
-
-PUT http://localhost:3333/mangas/f6fee4f7-05e8-4a34-9d48-233f1f78a0ae
+//Atualizando o livro cadastrado
+PUT http://localhost:3333/mangas/
 Content-Type: application/json
 
 {
@@ -29,5 +30,5 @@ Content-Type: application/json
 
 
 ###
-
-DELETE http://localhost:3333/mangas/f6fee4f7-05e8-4a34-9d48-233f1f78a0ae
+//Deletando o livro cadastrado
+DELETE http://localhost:3333/mangas/

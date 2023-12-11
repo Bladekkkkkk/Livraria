@@ -7,7 +7,9 @@ export class DatabaseMemory{
 //listando mangas em as  chaves
 list(search){
     return Array.from(this.#mangas.entries()).map((mangaArray)  => {
+        //Primeira Posição
         const id = mangaArray[0]
+        //Segunda Posição
         const data = mangaArray[1]
 
         return{
@@ -15,7 +17,7 @@ list(search){
             ...data,
         }
     })
-
+//Retornando apenas resultados da pesquisa
 .filter(manga => {
     if (search) {
         return manga.titulo.includes(search)
@@ -35,7 +37,7 @@ create(manga){
 update(id, manga){
     this.#mangas.set(id, manga)
 }
-
+//Deletando livro
 delete(id, manga){
     this.#mangas.delete(id, manga)
 }
